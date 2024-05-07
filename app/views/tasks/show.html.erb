@@ -1,0 +1,11 @@
+<h1><%=  @task.title %></h1>
+
+<div>
+    <h2>Title: <%= @task.title %></h2>
+    <p>Location: <%= @task.location %></p>
+    <p>Description: <%= @task.description %></p>
+    <p>Price: <%= @task.price %></p>
+    <p>User: <%= @task.user.username %></p>
+</div>
+<%= link_to 'back to home', root_path %>
+<%= link_to 'create booking', new_task_booking_path(@task) %>

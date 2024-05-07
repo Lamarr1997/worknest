@@ -1,4 +1,9 @@
 class TasksController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
+
+  def index
+    @tasks = Task.all
+  end
   def new
     @task = Task.new
   end
@@ -13,6 +18,10 @@ class TasksController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @task = Task.find(params[:id])
   end
 
   private

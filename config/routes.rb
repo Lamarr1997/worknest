@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/index'
   get 'tasks/new'
   get 'tasks/create'
   devise_for :users
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :tasks, only: [:new, :create, :show]
-
+  resources :tasks, only: [:index, :new, :create, :show] do
+    resources :bookings, only: [:new, :create, :show]
+  end
 end
