@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @tasks = @list = Page.find(params[:id])
+    @tasks = Page.find(params[:id])
   end
 
 end
