@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div>
+  <h1>Worknest</h1>
+  <p>Find work that is suitable to you!</p>
+</div>
+
+
+
+
+
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task %></li>
+  <% end %>
+</ul>
