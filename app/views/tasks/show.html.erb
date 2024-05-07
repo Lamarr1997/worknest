@@ -8,3 +8,4 @@
     <p>User: <%= @task.user.username %></p>
 </div>
 <%= link_to 'back to home', root_path %>
+<%= link_to 'create booking', new_task_booking_path(@task) %>
