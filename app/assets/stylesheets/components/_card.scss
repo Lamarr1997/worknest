@@ -30,14 +30,14 @@
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   border-radius: 20px;
-  
+
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #bbb;
   color: black;
-  background-image: url(../../images/Worknest-Logo-Clean.png);
+  background-image: asset-url("Worknest-Logo-Clean.png");
   background-size: cover;
 }
 
@@ -46,4 +46,12 @@
   background-color: rgb(75, 12, 131);
   color: white;
   transform: rotateY(180deg);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  // justify-content: space-between;
+  align-items: flex-end;
 }
