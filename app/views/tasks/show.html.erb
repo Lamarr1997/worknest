@@ -1,11 +1,23 @@
-<h1><%=  @task.title %></h1>
-
 <div>
-    <h2>Title: <%= @task.title %></h2>
+    <h2><%= @task.title%></h2>
     <p>Location: <%= @task.location %></p>
     <p>Description: <%= @task.description %></p>
     <p>Price: <%= @task.price %></p>
     <p>User: <%= @task.user.username %></p>
+    <div class="task-images">
+      <img class="image-hero",
+      src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>%
+      style="height: 100%"
+      />
+      <div>
+        <img class="image-additional",
+          src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>%
+          style="height: 45%"/>
+         <img class="image-additional",
+          src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>%
+          style="height: 45%"/>
+      </div>
+    </div>
 </div>
-<%= link_to 'back to home', root_path %>
-<%= link_to 'create booking', new_task_booking_path(@task) %>
+<%= link_to 'Back to all tasks', root_path %>
+<%= button_to 'Create Booking', task_bookings_path(@task) %>

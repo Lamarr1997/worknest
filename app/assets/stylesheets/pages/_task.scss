@@ -1,0 +1,13 @@
+.task-images{
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+.image-additional {
+  display: block;
+}
+
+img {
+  object-fit: contain;
+}

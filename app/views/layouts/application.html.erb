@@ -13,7 +13,8 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <%= yield %>
-    <%# <h2>Hi <%= current_user.email %></h2> %>
+    <div class="container">
+        <%= yield %>
+    </div>
   </body>
 </html>

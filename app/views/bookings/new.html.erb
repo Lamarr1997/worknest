@@ -1,2 +1,10 @@
 <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p>
+
+<%= simple_form_for([@task, @booking]) do |f| %>
+  <%= f.association :task %>
+  <%= f.submit %>
+<% end %>
+
+<%# task.user (person who MADE the task)
+task.booking.user (person who FILLS the task) %>

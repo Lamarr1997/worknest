@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bookings/index'
-  get 'tasks/new'
-  get 'tasks/create'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -15,6 +10,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :tasks, only: [:index, :new, :create, :show] do
-    resources :bookings, only: [:new, :create, :show]
+    resources :bookings, only: [:create, :show]
   end
 end

@@ -23,7 +23,7 @@ users = [gloria, lamarr, dev]
   task = Task.new(
     title: Faker::Hobby.activity,
     location: "London",
-    description: Faker::Lorem.sentence,
+    description: Faker::Lorem.paragraphs,
     price: rand(10...100),
     user: users.sample
   )
