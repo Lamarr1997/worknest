@@ -8,9 +8,28 @@
 
 
 
+<div>
 
-<ul>
+  <%# <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul> %>
+
   <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task) %></li>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h2>tasks</h2>
+    </div>
+    <div class="flip-card-back">
+      <%= task.title %>
+      <%# <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p> %>
+    </div>
+  </div>
+</div>
   <% end %>
-</ul>
+
+</div>
