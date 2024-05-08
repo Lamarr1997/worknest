@@ -19,7 +19,7 @@ dev = User.create(username: "DevWoo", first_name: "Dev", last_name: "isTheBest",
 
 users = [gloria, lamarr, dev]
 
-10.times do
+40.times do
   task = Task.new(
     title: Faker::Hobby.activity,
     location: "London",

@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1496369510/photo/african-american-man-assembling-new-furniture-in-the-apartment.jpg?s=1024x1024&w=is&k=20&c=wCWmHXSBqM2TFtF7wgLJCddWNwAMuWiubqxg4Q9IoFM=);">
   <div class="container">
     <h1>Worknest</h1>
     <p>Find work that is suitable to you!</p>
@@ -13,7 +13,7 @@
           <h2><%= task.title %></h2>
         </div>
         <div class="flip-card-back">
-          <%= link_to task_path(task) %>
+          <%= link_to task.title, task_path(task) %>
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+<h1>All The Tasks</h1>
+
+<div class="card-container mt-5">
+  <% @tasks.each do |task| %>
+    <div class="flip-card row gap-2">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h2><%= task.title %></h2>
+        </div>
+        <div class="flip-card-back">
+          <%= link_to task.title, task_path(task) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
