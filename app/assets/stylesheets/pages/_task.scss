@@ -6,9 +6,26 @@
 
 .image-additional {
   display: block;
+  height: 50%;
   width: 100%;
 }
 
 img {
   object-fit: cover;
+}
+
+.image-container{
+  height: 500px;
+}
+
+
+.text-overlay {
+  margin-top: 30px;
+  // transform: translate(-70%, -50%);
+  background-color: rgba(86, 11, 207, 0.7);
+  color: rgb(246, 248, 250);
+  // padding: 4px;
+  font-size: 18px;
+  display:flex;
+  width: 100%
 }

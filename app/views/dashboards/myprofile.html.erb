@@ -3,6 +3,7 @@
 
 <div class="profile-user">
 <h1 class="mb-5">How others see you: <%= @user.username %> ⭐</h1>
+  <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-info" %>
   <div class="d-flex justify-content-between">
     <img src="https://static.vecteezy.com/system/resources/previews/020/765/399/original/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
     class="rounded-circle"
