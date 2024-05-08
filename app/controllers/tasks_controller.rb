@@ -12,7 +12,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @user = current_user
     @task.user = @user
-    if @task.valid
+    if @task.valid?
       @task.save
       redirect_to root_path
     else
@@ -27,6 +27,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.permit(:task).require(:title, :location, :price)
+    params.require(:task).permit(:title, :location, :price)
   end
 end
