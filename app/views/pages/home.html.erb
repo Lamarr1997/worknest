@@ -1,16 +1,21 @@
-
-<div>
-  <h1>Worknest</h1>
-  <p>Find work that is suitable to you!</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Worknest</h1>
+    <p>Find work that is suitable to you!</p>
+  </div>
 </div>
 
-
-
-
-
-
-<ul>
+<div class="card-container mt-5">
   <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task) %></li>
+    <div class="flip-card row gap-2">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h2><%= task.title %></h2>
+        </div>
+        <div class="flip-card-back">
+          <%= link_to task_path(task) %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
