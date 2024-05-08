@@ -10,6 +10,7 @@
 
 require 'faker'
 
+Booking.delete_all
 Task.delete_all
 User.delete_all
 
