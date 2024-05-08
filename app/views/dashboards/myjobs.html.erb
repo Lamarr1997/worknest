@@ -1,0 +1,8 @@
+<h1>Dashboards#myjobs</h1>
+
+
+<% @jobs.each do |job| %>
+  <ul>
+    <li><%= link_to job.task.title, task_booking_path(job.task,job) %></li>
+  </ul>
+<% end %>
