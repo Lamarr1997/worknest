@@ -1,8 +1,8 @@
-<h1>Dashboards#myjobs</h1>
-
-
-<% @jobs.each do |job| %>
-  <ul>
-    <li><%= link_to job.task.title, task_booking_path(job.task,job) %></li>
-  </ul>
-<% end %>
+<div class = "list-activities">
+  <h1>Jobs I need done:</h1>
+  <% @jobs.each do |job| %>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action"><%= link_to job.task.title, task_booking_path(job.task,job) %></li>
+    </ul>
+  <% end %>
+</div>

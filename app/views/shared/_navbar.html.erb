@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <div>
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "Worknest-Logo-Clean-simple-01.png" %>
       <% end %>
       <h2 class="navbar-name">Worknest</h2>
@@ -19,6 +19,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+           <li class="nav-item">
+            <%= link_to "Create Task", new_task_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
