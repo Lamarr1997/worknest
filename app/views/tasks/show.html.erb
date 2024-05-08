@@ -1,26 +1,25 @@
-<div>
+<div class="blue-line">
     <h2><%= @task.title%></h2>
-    <p>Location: <%= @task.location %></p>
-    <p>Description: <%= @task.description %></p>
-    <p>Price: <%= @task.price %></p>
-    <p>User: <%= @task.user.username %></p>
-    <div class="task-images">
-      <img class="image-hero",
-      src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>
-      style="height: 100%;
-      width: 50%"
+
+  <div class="d-flex">
+    <img class="image-hero",
+    src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>
+    />
+
+    <div class="sub-image">
+      <img class="image-additional",
+        src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
       />
-      <div style="width: 50%">
-        <img class="image-additional",
-          src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
-          style="height: 45%;
-          width: 100%"/>
-         <img class="image-additional",
-          src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>
-          style="height: 45%;
-          width: 100%"/>
+      <img class="image-additional",
+        src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>
+      />
+      <div class="text-overlay">
+        £<%= @task.location %> | £<%= @task.price %> | <%= @task.user.username %>
       </div>
     </div>
+  </div>
+  <p>Description: <%= @task.description %></p>
 </div>
+
 <%= link_to 'Back to all tasks', root_path %>
 <%= button_to 'Create Booking', task_bookings_path(@task) %>
