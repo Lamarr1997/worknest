@@ -1,6 +1,24 @@
-<h1>A bit about yourself: <%= @user.username %> ⭐</h1>
 <% task = @user.tasks.length %>
 <% jobs = @user.bookings.length %>
 
-<%= task %>
-<%= jobs %>
+<div class="profile-user">
+<h1 class="mb-5">How others see you: <%= @user.username %> ⭐</h1>
+  <div class="d-flex justify-content-between">
+    <img src="https://static.vecteezy.com/system/resources/previews/020/765/399/original/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+    class="rounded-circle"
+    style="width: 150px; height: 150px;
+    object-fit: cover;"/>
+    <div class="m-4">
+      <h1><%= @user.username %></h1>
+      <h2>⭐⭐⭐⭐⭐</h2>
+    </div>
+    <div class="m-4">
+      <i class="fa-solid fa-trophy"></i>
+      <h2><%= jobs %> jobs posted</h2>
+    </div>
+    <div class="m-4">
+      <i class="fa-solid fa-hammer"></i>
+      <h2><%= task %> tasks to be done</h2>
+    </div>
+  </div>
+</div>
