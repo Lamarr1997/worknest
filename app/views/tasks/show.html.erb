@@ -1,12 +1,11 @@
-<div class="blue-line">
+<div class="task-container blue-line">
     <h2><%= @task.title%></h2>
 
-  <div class="d-flex">
-    <img class="image-hero",
+  <div class="d-flex w-100">
+    <img class="image-hero w-50",
     src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>
     />
-
-    <div class="sub-image">
+    <div class="sub-image w-50">
       <img class="image-additional",
         src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
       />
