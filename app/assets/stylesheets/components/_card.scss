@@ -35,7 +35,7 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: $vanilla;
   color: black;
   background-image: asset-url("Worknest-Logo-Clean.png");
   background-size: cover;
