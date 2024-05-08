@@ -3,3 +3,4 @@
 <p>Task: <%= @booking.task.title %></p>
 <p>Created by: <%= @booking.task.user.username %></p>
 <p>To be completed by: <%= @booking.user.username %></p>
+<%= link_to "Delete booking", task_booking_path(@task,@booking), data: {turbo_method: :delete, turbo_confirm: "Delete ?"} %>

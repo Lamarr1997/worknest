@@ -19,6 +19,14 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @task = @booking.task
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    @task = @booking.task
+    redirect_to task_path(@task)
   end
 
   private

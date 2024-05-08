@@ -6,15 +6,15 @@
     <p>User: <%= @task.user.username %></p>
     <div class="task-images">
       <img class="image-hero",
-      src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>%
+      src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>
       style="height: 100%"
       />
       <div>
         <img class="image-additional",
-          src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>%
+          src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
           style="height: 45%"/>
          <img class="image-additional",
-          src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>%
+          src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>
           style="height: 45%"/>
       </div>
     </div>
