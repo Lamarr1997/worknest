@@ -7,6 +7,13 @@ class TasksController < ApplicationController
     else
       @tasks = Task.all
     end
+
+    @markers = @tasks.geocoded.map do |task|
+      {
+        lat: task.latitude,
+        lng: task.longitude
+      }
+    end
   end
 
   def new
@@ -37,4 +44,3 @@ class TasksController < ApplicationController
     params.require(:task).permit(:title, :location, :price, :photo)
   end
 end
-
