@@ -3,16 +3,7 @@
 
 <div class="profile-user">
 <h1 class="mb-5">How others see you: <%= @user.username %> ⭐</h1>
-  <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-info" %>
   <div class="d-flex justify-content-between">
-    <img src="https://static.vecteezy.com/system/resources/previews/020/765/399/original/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
-    class="rounded-circle"
-    style="width: 150px; height: 150px;
-    object-fit: cover;"/>
-    <div class="m-4">
-      <h1><%= @user.username %></h1>
-      <h2>⭐⭐⭐⭐⭐</h2>
-    </div>
     <div class="m-4">
       <i class="fa-solid fa-trophy"></i>
       <h2><%= jobs %> jobs posted</h2>
@@ -23,3 +14,116 @@
     </div>
   </div>
 </div>
+
+<div class="fa-3x">
+  <i class="fa-solid fa-circle-plus fa-beat"></i>
+  <i class="fa-solid fa-heart fa-beat"></i>
+  <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+  <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s;"></i>
+  <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
+</div>
+
+
+
+
+<div  class="main-content">
+
+            <!--########################## Profile Starts Here ############################# -->
+
+            <div class="profile-head">
+               <div class="row vh-100">
+                   <div class="col-xl-6 text-center mx-auto align-self-center ">
+                        <div class="imgcover mb-4">
+                            <img src="https://static.vecteezy.com/system/resources/previews/020/765/399/original/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+                            class="rounded-circle"
+                            style="width: 150px; height: 150px;
+                            object-fit: cover;"/>
+                            <div class="m-4">
+                              <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-info" %>
+                              <h1><%= @user.username %></h1>
+                              <h2>⭐⭐⭐⭐⭐</h2>
+                            </div>
+                        </div>
+                        <b class="fs-6">Hello I am, <%= @user.username %></b>
+                        <h1 class="fw-bold mb-4 fs-1">Full Stack Develper</h1>
+                        <p>This section would be linked to the description about user in the user model which will be linked by the edit profile form</p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+               </div>
+            </div>
+
+             <div id="about" class="about px-4 bg-white py-5 rounded">
+                <div class="titie-row row mb-3">
+                    <h2 class="fw-bolder text-center">About Me</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p class="text-center"><b>I am, <%= @user.username %></b></p>
+                        <p class="pt-2 fs-6 text-justify text-center">this section would be a description about myself and what skills i am capable of doing</p>
+
+                        <h4 class=" fs-5 my-3 mt-4 fw-bolder text-center">What is my skill level ?</h4>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+
+                        <div class="row skill-set">
+                            <div class="col-md-6 py-3">
+                               <h6 class="fw-bold"><i class="fa-solid fa-toolbox"></i></h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                </div>
+                            </div>
+                             <div class="col-md-6 py-3">
+                                <h6 class="fw-bold"></h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 65%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-3">
+                                <h6 class="fw-bold"><i class="fa-solid fa-broom"></i></h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+
+                             <div class="col-md-6 py-3">
+                                <h6 class="fw-bold">Laravel</h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 py-3">
+                                <h6 class="fw-bold">Django</h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 py-3">
+                                <h6 class="fw-bold">Next Js</h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 py-3">
+                                <h6 class="fw-bold">Phoptoshop</h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 82%;" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 py-3">
+                                <h6 class="fw-bold">Sketch</h6>
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Example with label" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="assets/images/profile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
