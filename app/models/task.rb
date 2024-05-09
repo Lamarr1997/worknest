@@ -5,7 +5,7 @@ class Task < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :task_search,
-  against: [ :title, :synopsis ],
+  against: [ :title, :description ],
   using: {
     tsearch: { prefix: true }
   }
