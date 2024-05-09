@@ -7,11 +7,11 @@
 <div class="task-container blue-line">
     <h2><%= @task.title%></h2>
 
-  <div class="d-flex image-container gap-3">
+  <div class="d-flex image-container">
     <img class="image-hero w-50",
     src = <%= photo_url %>
     />
-    <div class="d-flex flex-column sub-image w-50 gap-3">
+    <div class="d-flex flex-column sub-images w-50">
       <img class="image-additional",
         src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
       />
