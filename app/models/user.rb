@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tasks
   has_many :bookings
-  
+  has_one_attached :photo
+
   # do they have many booking through the task
   # also do they have many booking as well.
 end

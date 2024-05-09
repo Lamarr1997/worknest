@@ -51,7 +51,11 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "devise"
 gem "faker"
+<<<<<<< HEAD
 gem "pg_search"
+=======
+gem "cloudinary"
+>>>>>>> 0329e1036bf032f5222d1e35bacd873b1b604715
 
 group :development, :test do
   gem "dotenv-rails"

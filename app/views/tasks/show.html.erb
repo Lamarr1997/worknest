@@ -1,20 +1,26 @@
+<% if @task.photo.attached? %>
+  <% photo_url = cl_image_path @task.photo.key, height: 100, crop: :fill %>
+<% else %>
+  <% photo_url = image_path "Worknest-Logo-Clean.png" %>
+<% end %>
+
 <div class="task-container blue-line">
     <h2><%= @task.title%></h2>
 
-  <div class="d-flex w-100">
+  <div class="d-flex image-container gap-3">
     <img class="image-hero w-50",
-    src = <%= "https://source.unsplash.com/random/?#{@task.title}" %>
+    src = <%= photo_url %>
     />
-    <div class="sub-image w-50">
+    <div class="d-flex flex-column sub-image w-50 gap-3">
       <img class="image-additional",
         src = <%= "https://source.unsplash.com/random/?1,#{@task.title}" %>
       />
       <img class="image-additional",
         src = <%= "https://source.unsplash.com/random/?2,#{@task.title}" %>
       />
-      <div class="text-overlay">
-        £<%= @task.location %> | £<%= @task.price %> | <%= @task.user.username %>
-      </div>
+    </div>
+    <div class="text-overlay">
+      £<%= @task.location %> | £<%= @task.price %> | <%= @task.user.username %>
     </div>
   </div>
   <p>Description: <%= @task.description %></p>
