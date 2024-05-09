@@ -64,7 +64,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_09_104548) do
     t.string "location"
     t.float "price"
     t.string "description"
-    t.date "available_date"
     t.string "devise"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
