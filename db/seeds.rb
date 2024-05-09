@@ -19,6 +19,7 @@ lamarr = User.create(username: "LamarrWoo", first_name: "Lamarr", last_name: "Pa
 dev = User.create(username: "DevWoo", first_name: "Dev", last_name: "isTheBest", email: "d3@test.com", password: "123456")
 
 users = [gloria, lamarr, dev]
+dates = ["2024/05/20", "2024/06/10", "2024/05/15", "2024/05/29"]
 
 40.times do
   task = Task.new(
@@ -26,6 +27,7 @@ users = [gloria, lamarr, dev]
     location: "London",
     description: Faker::Lorem.paragraphs,
     price: rand(10...100),
+    available_date: dates.sample,
     user: users.sample
   )
   task.save

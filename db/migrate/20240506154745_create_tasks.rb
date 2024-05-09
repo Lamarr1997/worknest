@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[7.1]
       t.string :location
       t.float :price
       t.string :description
+      t.date :available_date
       t.string :devise
       t.references :user, null: false, foreign_key: true
 
