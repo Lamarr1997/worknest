@@ -2,7 +2,11 @@ class TasksController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
   def index
-    @tasks = Task.all
+    if params[:query].present?
+      @tasks = Task.task_search(params[:query])
+    else
+      @tasks = Task.all
+    end
   end
 
   def new
@@ -24,6 +28,8 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
   end
+
+
 
   private
 

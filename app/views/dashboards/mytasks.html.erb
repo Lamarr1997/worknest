@@ -3,7 +3,15 @@
 
   <% @tasks.each do |task| %>
     <ul class="list-group">
-      <li class="list-group-item list-group-item-action"><%= link_to task.title, task_path(task) %></li>
+    <div class="flip-card row gap-2">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h2><%= task.title %></h2>
+        </div>
+        <div class="flip-card-back">
+          <li class="list-group-item list-group-item-action"><%= link_to task.title, task_path(task) %></li>
+        </div>
+      </div>
     </ul>
   <% end %>
 </div>
