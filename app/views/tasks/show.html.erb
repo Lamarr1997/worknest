@@ -13,7 +13,7 @@
       </div>
       <div class = "d-flex flex-column w-50 h-100">
         <div class="show-actions">
-          <%= button_to 'Create Booking', task_bookings_path(@task) %>
+          <%= button_to 'Book Now', task_bookings_path(@task) %>
           <%= button_to 'Back to all tasks', root_path %>
           <%= button_to "Visit #{@task.user.username}'s profile", root_path %>
         </div>

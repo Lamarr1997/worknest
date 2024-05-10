@@ -1,3 +1,13 @@
+
+<div>
+  <h1><%= @user.username %></h1>
+</div>
+
+<div class="info-jobs">
+  <h3>info</h3>
+  <p>You can track all the jobs you need to get done and see which user the job is assigned to.</p>
+</div>
+
 <div class = "list-activities">
   <h1>Jobs I need done:</h1>
   <% @jobs.each do |job| %>
@@ -6,3 +16,6 @@
     </ul>
   <% end %>
 </div>
+
+
+
