@@ -11,7 +11,7 @@
         <%= render "/tasks/images_carousel", task: @task, class: "h-100" %>
       </div>
       <div class = "d-flex flex-column w-50 h-100">
-        <%= button_to 'Create Booking', task_bookings_path(@task) %>
+        <%= button_to 'Create Booking', task_bookings_path(@task), class: "button_to" %>
         <div style="width: 100%; height: 600px;"
           data-controller="map"
           data-map-markers-value="<%= @marker.to_json %>"
