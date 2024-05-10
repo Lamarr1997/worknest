@@ -12,3 +12,11 @@
 @import "info-jobs";
 @import "button";
 @import "container";
+
+img {
+  object-fit: cover;
+}
+
+.min-height {
+  min-height: 80vh;
+}

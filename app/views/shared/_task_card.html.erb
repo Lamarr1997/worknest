@@ -8,9 +8,12 @@
         <p class="truncate"><%= task.description %>...</p>
       </div>
     </div>
-    <div class="flip-card-back">
+    <div class="flip-card-back p-4 text-content">
       <h2><%= task.title %></h2>
+      <p><strong><%=task.user.username%></strong> will pay: <strong>£<%= task.price %></strong></p>
       <p><%= task.description %></p>
+      <p><i class="fa-solid fa-location-dot"></i> <%= task.location %></p>
+      <p><i class="fa-solid fa-calendar-check"></i> Needed by: <%= task.task_due_by %></p>
     </div>
   </div>
 </div>

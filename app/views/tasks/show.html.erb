@@ -6,16 +6,16 @@
 
 <div class="task-container blue-line">
     <h1><%= @task.title%></h1>
-    <div class="d-flex show-container gap-3">
-      <div class="d-flex flex-column w-50 h-100 gap-1">
+    <div class="d-flex show-container gap-3 p-3">
+      <div class="d-flex flex-column w-50 h-100 gap-3">
         <%= render "/tasks/images_carousel", task: @task %>
          <p><%= @task.description %></p>
       </div>
       <div class = "d-flex flex-column w-50 h-100">
-        <div class="show-actions">
-          <%= button_to 'Book Now', task_bookings_path(@task) %>
-          <%= button_to 'Back to all tasks', root_path %>
-          <%= button_to "Visit #{@task.user.username}'s profile", root_path %>
+        <div class="show-actions mb-3 d-flex justify-content-sm-around">
+          <%= button_to 'Back to all tasks', root_path, class: "btn btn-info" %>
+          <%= button_to "Visit #{@task.user.username}'s profile", root_path, class: "btn btn-info" %>
+          <%= button_to 'Book Now', task_bookings_path(@task), class: "btn btn-primary" %>
         </div>
         <div style="width: 100%; height: 600px;"
           data-controller="map"
