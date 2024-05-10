@@ -1,6 +1,9 @@
-<h1>Bookings#show</h1>
+<h1>Booking Confirmed!</h1>
 
-<p>Task: <%= @booking.task.title %></p>
-<p>Created by: <%= @booking.task.user.username %></p>
-<p>To be completed by: <%= @booking.user.username %></p>
-<%= link_to "Delete booking", task_booking_path(@task,@booking), data: {turbo_method: :delete, turbo_confirm: "Delete ?"} %>
+<div class="p-4">
+  <p>Task: <%= @booking.task.title %></p>
+  <p>Created by: <%= @booking.task.user.username %></p>
+  <p>To be completed by: <%= @booking.user.username %></p>
+  <%= link_to "Delete booking", task_booking_path(@task,@booking), class: "btn btn-warning", data: {turbo_method: :delete, turbo_confirm: "Delete ?"} %>
+  <%= link_to "Back to Home", root_path, class: "btn btn-success", data: {turbo_method: :delete, turbo_confirm: "Delete ?"} %>
+</div>

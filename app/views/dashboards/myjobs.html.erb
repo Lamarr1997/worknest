@@ -1,22 +1,13 @@
-
-<div>
-  <h1><%= @user.username %></h1>
-</div>
-
-<div class="info-jobs">
-  <h3>info</h3>
-  <p>You can track all the jobs you need to get done and see which user the job is assigned to.</p>
-</div>
-
 <div class = "list-activities">
-  <h1>Jobs I need done:</h1>
-  <div class="container">
+  <h1>Jobs I'm assisting with:</h1>
+  <p>Track all the jobs you need to get done, make sure to check the due date.</p>
+  <div class="">
     <div class="card-container mt-5 row">
-      <% @jobs.each do |task| %>
-        <%= link_to(task_path(task), class: "col-lg-3 col-md-6 col-12") do %>
-          <%= render "/shared/task_card", task: task.task %>
+      <div class="list-group">
+        <% @jobs.each do |job| %>
+          <a href=<%= task_path(job.task)%> class="list-group-item list-group-item-action"><%=job.task.title%> for <%=job.task.user.username%> due by: <%=job.task.task_due_by%>.</a>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

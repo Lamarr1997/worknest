@@ -17,7 +17,7 @@
     <% if controller_name == 'pages' && action_name == 'home' %>
       <%= yield %>
     <% else %>
-      <div class="container mt-5">
+      <div class="container mt-5 min-height">
         <%= yield %>
       </div>
     <% end %>
