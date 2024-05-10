@@ -5,13 +5,18 @@
 <% end %>
 
 <div class="task-container blue-line">
-    <h2><%= @task.title%></h2>
-    <div class="d-flex show-container">
-      <div class="d-flex flex-column w-50 h-100">
-        <%= render "/tasks/images_carousel", task: @task, class: "h-100" %>
+    <h1><%= @task.title%></h1>
+    <div class="d-flex show-container gap-3">
+      <div class="d-flex flex-column w-50 h-100 gap-1">
+        <%= render "/tasks/images_carousel", task: @task %>
+         <p><%= @task.description %></p>
       </div>
       <div class = "d-flex flex-column w-50 h-100">
-        <%= button_to 'Book Now', task_bookings_path(@task) %>
+        <div class="show-actions">
+          <%= button_to 'Book Now', task_bookings_path(@task) %>
+          <%= button_to 'Back to all tasks', root_path %>
+          <%= button_to "Visit #{@task.user.username}'s profile", root_path %>
+        </div>
         <div style="width: 100%; height: 600px;"
           data-controller="map"
           data-map-markers-value="<%= @marker.to_json %>"
@@ -19,7 +24,4 @@
         </div>
       </div>
     </div>
-        <p><%= @task.description %></p>
 </div>
-
-<%= link_to 'Back to all tasks', root_path %>
