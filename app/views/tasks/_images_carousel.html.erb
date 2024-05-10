@@ -1,7 +1,14 @@
+  <% if task.photo.attached? %>
+    <% photo_url = cl_image_path task.photo.key, crop: :fill %>
+  <% else %>
+    <% photo_url = image_path "https://source.unsplash.com/random/?1,#{task.title}" %>
+  <% end %>
+
+
 <div id="carouselExampleControls" class="carousel slide h-75" data-bs-ride="carousel">
   <div class="carousel-inner h-100">
     <div class='carousel-item active data-bs-interval="500"'>
-      <%= image_tag "https://source.unsplash.com/random/?1,#{task.title}", class: "d-block w-100" %>
+      <%= image_tag photo_url, class: "d-block w-100" %>
     </div>
     <div class="carousel-item">
       <%= image_tag "https://source.unsplash.com/random/?2,#{task.title}", class: "d-block w-100" %>
