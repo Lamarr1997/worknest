@@ -13,7 +13,7 @@ class TasksController < ApplicationController
         lat: task.latitude,
         lng: task.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: {task: task}),
-        marker_html: '<i class="fa-solid fa-hammer"></i>'
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
@@ -41,7 +41,7 @@ class TasksController < ApplicationController
         lat: @task.latitude,
         lng: @task.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: {task: @task}),
-        marker_html: '<i class="fa-solid fa-hammer"></i>'
+        marker_html: render_to_string(partial: "marker")
       }]
     end
   end
