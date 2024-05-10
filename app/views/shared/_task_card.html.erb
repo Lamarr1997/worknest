@@ -5,7 +5,7 @@
       <div>
         <h2><%= task.title %></h2>
         <p><strong><%=task.user.username%></strong> will pay: <strong>£<%= task.price %></strong></p>
-        <p><%= task.description %></p>
+        <p><%= task.description.to_s[0,40] %>...</p>
       </div>
     </div>
     <div class="flip-card-back">
