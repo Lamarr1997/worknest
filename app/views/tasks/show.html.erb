@@ -1,9 +1,3 @@
-<% if @task.photo.attached? %>
-  <% photo_url = cl_image_path @task.photo.key, height: 100, crop: :fill %>
-<% else %>
-  <% photo_url = image_path "Worknest-Logo-Clean.png" %>
-<% end %>
-
 <div class="task-container blue-line">
     <h1><%= @task.title%></h1>
     <div class="d-flex show-container gap-3 p-3">
