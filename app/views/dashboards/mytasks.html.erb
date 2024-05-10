@@ -2,16 +2,22 @@
   <h1>Tasks I'm helping others with:</h1>
 
   <% @tasks.each do |task| %>
-    <ul class="list-group">
+    <div class="card-container mt-5 row g-3">
+      <% @tasks.each do |task| %>
+        <%= link_to(task_path(task), class: "col-lg-3 col-md-4 col-12") do %>
+          <%= render "/shared/task_card", task: task %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+    <%# <ul class="list-group">
     <div class="flip-card row gap-2">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-           <h2><%= task.title %></h2>
-        </div>
+           <h2><%= task.title %>
+        <%# </div>
         <div class="flip-card-back">
-          <li class="list-group-item list-group-item-action"><%= link_to task.title, task_path(task) %></li>
-        </div>
-      </div>
-    </ul>
-  <% end %>
-</div>
+          <li class="list-group-item list-group-item-action"><%= link_to task.title, task_path(task) %>

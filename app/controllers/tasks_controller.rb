@@ -36,6 +36,14 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    if @task.geocoded?
+      @marker = [{
+        lat: @task.latitude,
+        lng: @task.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {task: @task}),
+        marker_html: '<i class="fa-solid fa-hammer"></i>'
+      }]
+    end
   end
 
   private
